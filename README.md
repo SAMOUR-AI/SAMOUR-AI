@@ -19,38 +19,28 @@
 
 <img src="divider.svg" width="100%" />
 
+<div align="center">
 <br>
 
+### How it works
+
+<br>
+
+<img src="flow.svg" width="100%" />
+
+</div>
+
+<img src="divider.svg" width="100%" />
+
 <div align="center">
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### What is SAMOUR-AI?
-
-**Gate Apex** is a pre-execution governance middleware for AI agents.
-
-Every action an agent wants to take — sending an email, executing a transaction, deleting data — gets evaluated for **safety, ethics, compliance, and risk** before it executes.
-
-> *User Request → AI Agent → 🛡️ **GATE** → ✅ or ❌*
-
-</td>
-<td width="50%" valign="top">
+<br>
 
 ### By the numbers
 
-| | |
-|:--|:--|
-| **5,000+** | test cases passing |
-| **8** | adversarial attack categories |
-| **6** | compliance-ready frameworks |
-| **< 200ms** | p99 latency |
-| **Ed25519** | cryptographic evidence signing |
-| **FR / EN** | multilingual threat detection |
+<br>
 
-</td>
-</tr>
-</table>
+<img src="stats.svg" width="100%" />
+
 </div>
 
 <img src="divider.svg" width="100%" />
@@ -61,29 +51,29 @@ Every action an agent wants to take — sending an email, executing a transactio
 
 ### What Gate Apex catches
 
-`prompt injection` · `jailbreaks` · `social engineering` · `data exfiltration` · `privilege escalation` · `CEO fraud` · `PII leaks` · `compound attacks` · `unicode evasion` · `multilingual exploits`
-
-</div>
-
 <br>
 
-<div align="center">
+`prompt injection` · `jailbreaks` · `social engineering` · `data exfiltration` · `privilege escalation` · `CEO fraud` · `PII leaks` · `compound attacks` · `unicode evasion` · `multilingual exploits`
+
+<br>
 
 ### What Gate Apex enforces
 
-`risk scoring` · `ethical governance` · `dignity invariants` · `adaptive thresholds` · `formal verification` · `cryptographic audit trail` · `threat intelligence` · `self-protection`
+<br>
 
-</div>
+`risk scoring` · `ethical governance` · `dignity invariants` · `adaptive thresholds` · `formal verification` · `cryptographic audit trail` · `threat intelligence` · `self-protection`
 
 <br>
 
-<div align="center">
-
 ### Compliance-ready for
+
+<br>
 
 `EU AI Act` · `SOC 2` · `NIST AI RMF` · `IEC 61508` · `PIPEDA` · `ISO 42001`
 
 </div>
+
+<br>
 
 <img src="divider.svg" width="100%" />
 
@@ -115,6 +105,8 @@ Every action an agent wants to take — sending an email, executing a transactio
 <div align="center">
 
 *Interested in AI safety, governance, or integrating Gate Apex?*
+
+<br>
 
 [![GitHub](https://img.shields.io/badge/SAMOUR--AI-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/SAMOUR-AI)
 
