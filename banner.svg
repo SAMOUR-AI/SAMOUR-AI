@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0a"/>
+      <stop offset="50%" style="stop-color:#1a1005"/>
+      <stop offset="100%" style="stop-color:#0a0a0a"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8b6914"/>
+      <stop offset="25%" style="stop-color:#d8a547"/>
+      <stop offset="50%" style="stop-color:#fff652"/>
+      <stop offset="75%" style="stop-color:#d8a547"/>
+      <stop offset="100%" style="stop-color:#8b6914"/>
+    </linearGradient>
+    <linearGradient id="goldShimmer" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#d8a547">
+        <animate attributeName="stop-color" values="#d8a547;#fff652;#d8a547" dur="3s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" style="stop-color:#fff652">
+        <animate attributeName="stop-color" values="#fff652;#d8a547;#fff652" dur="3s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#d8a547">
+        <animate attributeName="stop-color" values="#d8a547;#fff652;#d8a547" dur="3s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Animated particles -->
+    <circle id="particle" r="1.5" fill="#d8a547" opacity="0"/>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="300" fill="url(#bg)"/>
+  
+  <!-- Subtle grid pattern -->
+  <g opacity="0.03" stroke="#d8a547" stroke-width="0.5">
+    <line x1="0" y1="0" x2="0" y2="300"><animate attributeName="x1" values="0;1200" dur="20s" repeatCount="indefinite"/><animate attributeName="x2" values="0;1200" dur="20s" repeatCount="indefinite"/></line>
+    <line x1="100" y1="0" x2="100" y2="300" opacity="0.5"/>
+    <line x1="200" y1="0" x2="200" y2="300" opacity="0.5"/>
+    <line x1="300" y1="0" x2="300" y2="300" opacity="0.5"/>
+    <line x1="400" y1="0" x2="400" y2="300" opacity="0.5"/>
+    <line x1="500" y1="0" x2="500" y2="300" opacity="0.5"/>
+    <line x1="600" y1="0" x2="600" y2="300" opacity="0.5"/>
+    <line x1="700" y1="0" x2="700" y2="300" opacity="0.5"/>
+    <line x1="800" y1="0" x2="800" y2="300" opacity="0.5"/>
+    <line x1="900" y1="0" x2="900" y2="300" opacity="0.5"/>
+    <line x1="1000" y1="0" x2="1000" y2="300" opacity="0.5"/>
+    <line x1="1100" y1="0" x2="1100" y2="300" opacity="0.5"/>
+    <line x1="0" y1="50" x2="1200" y2="50" opacity="0.5"/>
+    <line x1="0" y1="100" x2="1200" y2="100" opacity="0.5"/>
+    <line x1="0" y1="150" x2="1200" y2="150" opacity="0.5"/>
+    <line x1="0" y1="200" x2="1200" y2="200" opacity="0.5"/>
+    <line x1="0" y1="250" x2="1200" y2="250" opacity="0.5"/>
+  </g>
+  
+  <!-- Animated horizontal gold lines -->
+  <g opacity="0.15">
+    <rect y="148" height="1" fill="url(#goldShimmer)" width="0">
+      <animate attributeName="width" values="0;1200" dur="2s" fill="freeze"/>
+      <animate attributeName="opacity" values="0;1;0.3" dur="2s" fill="freeze"/>
+    </rect>
+    <rect y="152" height="1" fill="url(#goldShimmer)" width="0">
+      <animate attributeName="width" values="0;1200" dur="2s" begin="0.1s" fill="freeze"/>
+    </rect>
+  </g>
+  
+  <!-- Floating particles -->
+  <g filter="url(#softGlow)">
+    <circle cx="100" cy="50" r="1" fill="#d8a547">
+      <animate attributeName="cy" values="50;250;50" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.8;0" dur="8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="250" cy="200" r="1.5" fill="#fff652">
+      <animate attributeName="cy" values="200;30;200" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.6;0" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="400" cy="100" r="1" fill="#d8a547">
+      <animate attributeName="cy" values="100;280;100" dur="9s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.7;0" dur="9s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="550" cy="250" r="1.2" fill="#8b6914">
+      <animate attributeName="cy" values="250;20;250" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.9;0" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="80" r="1" fill="#fff652">
+      <animate attributeName="cy" values="80;260;80" dur="10s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.5;0" dur="10s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="850" cy="220" r="1.5" fill="#d8a547">
+      <animate attributeName="cy" values="220;40;220" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.8;0" dur="8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1000" cy="120" r="1" fill="#d8a547">
+      <animate attributeName="cy" values="120;270;120" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.6;0" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1100" cy="180" r="1.2" fill="#fff652">
+      <animate attributeName="cy" values="180;30;180" dur="9s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.7;0" dur="9s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="150" cy="150" r="0.8" fill="#d8a547">
+      <animate attributeName="cy" values="150;40;150" dur="11s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.5;0" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="950" cy="60" r="1" fill="#8b6914">
+      <animate attributeName="cy" values="60;240;60" dur="8.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.6;0" dur="8.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Main title with glow -->
+  <text x="600" y="130" font-family="'Segoe UI', Arial, sans-serif" font-size="72" font-weight="700" fill="url(#goldShimmer)" text-anchor="middle" filter="url(#glow)" letter-spacing="8">
+    SAMOUR-AI
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="175" font-family="'Segoe UI', Arial, sans-serif" font-size="16" fill="#7d83a1" text-anchor="middle" letter-spacing="12" font-weight="300">
+    AI SAFETY · GOVERNANCE · SECURITY
+  </text>
+  
+  <!-- Decorative lines under subtitle -->
+  <line x1="350" y1="195" x2="850" y2="195" stroke="url(#gold)" stroke-width="0.5" opacity="0.4">
+    <animate attributeName="x1" values="600;350" dur="1.5s" fill="freeze"/>
+    <animate attributeName="x2" values="600;850" dur="1.5s" fill="freeze"/>
+  </line>
+  
+  <!-- Version tag -->
+  <rect x="530" y="210" width="140" height="28" rx="14" fill="none" stroke="#d8a547" stroke-width="1" opacity="0.5">
+    <animate attributeName="opacity" values="0;0.5" dur="2s" fill="freeze"/>
+  </rect>
+  <text x="600" y="229" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#d8a547" text-anchor="middle" letter-spacing="3" opacity="0">
+    GATE APEX v3.0
+    <animate attributeName="opacity" values="0;0.8" dur="2s" fill="freeze"/>
+  </text>
+
+  <!-- Corner accents -->
+  <g opacity="0.3" stroke="#d8a547" stroke-width="1">
+    <line x1="20" y1="20" x2="60" y2="20"><animate attributeName="x2" values="20;60" dur="1s" fill="freeze"/></line>
+    <line x1="20" y1="20" x2="20" y2="60"><animate attributeName="y2" values="20;60" dur="1s" fill="freeze"/></line>
+    <line x1="1180" y1="20" x2="1140" y2="20"><animate attributeName="x2" values="1180;1140" dur="1s" fill="freeze"/></line>
+    <line x1="1180" y1="20" x2="1180" y2="60"><animate attributeName="y2" values="20;60" dur="1s" fill="freeze"/></line>
+    <line x1="20" y1="280" x2="60" y2="280"><animate attributeName="x2" values="20;60" dur="1s" fill="freeze"/></line>
+    <line x1="20" y1="280" x2="20" y2="240"><animate attributeName="y2" values="280;240" dur="1s" fill="freeze"/></line>
+    <line x1="1180" y1="280" x2="1140" y2="280"><animate attributeName="x2" values="1180;1140" dur="1s" fill="freeze"/></line>
+    <line x1="1180" y1="280" x2="1180" y2="240"><animate attributeName="y2" values="280;240" dur="1s" fill="freeze"/></line>
+  </g>
+  
+  <!-- Bottom fade line -->
+  <rect x="0" y="298" width="1200" height="2" fill="url(#gold)" opacity="0.3"/>
+</svg>
