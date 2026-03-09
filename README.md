@@ -61,7 +61,7 @@
 
 <br>
 
-`risk scoring` · `ethical governance` · `dignity invariants` · `adaptive thresholds` · `formal verification` · `cryptographic audit trail` · `threat intelligence` · `self-protection`
+`risk scoring` · `ethical governance` · `ethical safeguards` · `adaptive thresholds` · `formal verification` · `cryptographic audit trail` · `threat intelligence` · `self-protection`
 
 <br>
 
