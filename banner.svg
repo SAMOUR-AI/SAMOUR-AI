@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" viewBox="0 0 1200 280">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0a05"/>
+      <stop offset="40%" style="stop-color:#1a1005"/>
+      <stop offset="100%" style="stop-color:#2d150a"/>
+    </linearGradient>
+
+    <!-- Shimmer that sweeps across the text -->
+    <linearGradient id="shimmer" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" style="stop-color:#8b6914"/>
+      <stop offset="30%" style="stop-color:#d8a547"/>
+      <stop offset="45%" style="stop-color:#fff9e0"/>
+      <stop offset="50%" style="stop-color:#fffdf5"/>
+      <stop offset="55%" style="stop-color:#fff9e0"/>
+      <stop offset="70%" style="stop-color:#d8a547"/>
+      <stop offset="100%" style="stop-color:#8b6914"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="-500,0;500,0;-500,0" dur="3.5s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <!-- Second shimmer layer (slower, opposite direction) -->
+    <linearGradient id="shimmer2" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" style="stop-color:#d8a547"/>
+      <stop offset="40%" style="stop-color:#c9962e"/>
+      <stop offset="50%" style="stop-color:#fff652"/>
+      <stop offset="60%" style="stop-color:#c9962e"/>
+      <stop offset="100%" style="stop-color:#d8a547"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="400,0;-400,0;400,0" dur="5s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <linearGradient id="subGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#5a5a7a"/>
+      <stop offset="50%" style="stop-color:#7d83a1"/>
+      <stop offset="100%" style="stop-color:#5a5a7a"/>
+    </linearGradient>
+
+    <!-- Wave fill: golden gradient like capsule-render -->
+    <linearGradient id="waveGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0d0a05"/>
+      <stop offset="50%" style="stop-color:#2d150a"/>
+      <stop offset="100%" style="stop-color:#d8a547"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="280" fill="url(#bg)"/>
+
+  <!-- Top golden wave (like capsule-render) -->
+  <path d="M0,0 L1200,0 L1200,40 C1000,55 800,20 600,40 C400,60 200,25 0,45 Z" fill="#d8a547" opacity="0.06"/>
+  <path d="M0,0 L1200,0 L1200,25 C1000,40 800,10 600,30 C400,50 200,15 0,35 Z" fill="#d8a547" opacity="0.03"/>
+
+  <!-- Floating particles -->
+  <circle cx="120" cy="70" r="1.2" fill="#d8a547" opacity="0">
+    <animate attributeName="opacity" values="0;0.7;0" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="70;200;70" dur="6s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="300" cy="190" r="1" fill="#fff652" opacity="0">
+    <animate attributeName="opacity" values="0;0.5;0" dur="5s" repeatCount="indefinite" begin="1s"/>
+    <animate attributeName="cy" values="190;40;190" dur="5s" repeatCount="indefinite" begin="1s"/>
+  </circle>
+  <circle cx="500" cy="50" r="1.3" fill="#d8a547" opacity="0">
+    <animate attributeName="opacity" values="0;0.6;0" dur="7s" repeatCount="indefinite" begin="2s"/>
+    <animate attributeName="cy" values="50;210;50" dur="7s" repeatCount="indefinite" begin="2s"/>
+  </circle>
+  <circle cx="750" cy="180" r="1" fill="#d8a547" opacity="0">
+    <animate attributeName="opacity" values="0;0.5;0" dur="8s" repeatCount="indefinite" begin="0.5s"/>
+    <animate attributeName="cy" values="180;30;180" dur="8s" repeatCount="indefinite" begin="0.5s"/>
+  </circle>
+  <circle cx="950" cy="90" r="1.2" fill="#fff652" opacity="0">
+    <animate attributeName="opacity" values="0;0.4;0" dur="6s" repeatCount="indefinite" begin="3s"/>
+    <animate attributeName="cy" values="90;220;90" dur="6s" repeatCount="indefinite" begin="3s"/>
+  </circle>
+  <circle cx="1100" cy="150" r="1" fill="#d8a547" opacity="0">
+    <animate attributeName="opacity" values="0;0.6;0" dur="7s" repeatCount="indefinite" begin="1.5s"/>
+    <animate attributeName="cy" values="150;40;150" dur="7s" repeatCount="indefinite" begin="1.5s"/>
+  </circle>
+
+  <!-- Thin horizontal accent line -->
+  <line x1="250" y1="158" x2="950" y2="158" stroke="#d8a547" stroke-width="0.5" opacity="0.12"/>
+
+  <!-- SAMOUR-AI: Layer 1 (base gold) -->
+  <text x="600" y="125" font-family="'Segoe UI',Arial,sans-serif" font-size="82" font-weight="800" fill="#8b6914" text-anchor="middle" letter-spacing="6" opacity="0.4">SAMOUR-AI</text>
+
+  <!-- SAMOUR-AI: Layer 2 (shimmer sweep) -->
+  <text x="600" y="125" font-family="'Segoe UI',Arial,sans-serif" font-size="82" font-weight="800" fill="url(#shimmer)" text-anchor="middle" letter-spacing="6">SAMOUR-AI</text>
+
+  <!-- SAMOUR-AI: Layer 3 (secondary sparkle) -->
+  <text x="600" y="125" font-family="'Segoe UI',Arial,sans-serif" font-size="82" font-weight="800" fill="url(#shimmer2)" text-anchor="middle" letter-spacing="6" opacity="0.25">SAMOUR-AI</text>
+
+  <!-- Subtitle -->
+  <text x="600" y="180" font-family="'Segoe UI',Arial,sans-serif" font-size="16" fill="url(#subGrad)" text-anchor="middle" letter-spacing="10" font-weight="300">AI SAFETY · GOVERNANCE · SECURITY</text>
+
+  <!-- Bottom golden wave (waving effect like capsule-render) -->
+  <path d="M0,230 Q150,215 300,235 Q450,255 600,240 Q750,225 900,245 Q1050,265 1200,235 L1200,280 L0,280 Z" fill="url(#waveGold)" opacity="0.5">
+    <animate attributeName="d" values="M0,230 Q150,215 300,235 Q450,255 600,240 Q750,225 900,245 Q1050,265 1200,235 L1200,280 L0,280 Z;M0,240 Q150,255 300,230 Q450,215 600,245 Q750,260 900,235 Q1050,220 1200,245 L1200,280 L0,280 Z;M0,230 Q150,215 300,235 Q450,255 600,240 Q750,225 900,245 Q1050,265 1200,235 L1200,280 L0,280 Z" dur="6s" repeatCount="indefinite"/>
+  </path>
+  <path d="M0,245 Q150,235 300,250 Q450,265 600,248 Q750,235 900,255 Q1050,270 1200,250 L1200,280 L0,280 Z" fill="#d8a547" opacity="0.25">
+    <animate attributeName="d" values="M0,245 Q150,235 300,250 Q450,265 600,248 Q750,235 900,255 Q1050,270 1200,250 L1200,280 L0,280 Z;M0,255 Q150,265 300,245 Q450,230 600,255 Q750,268 900,248 Q1050,235 1200,255 L1200,280 L0,280 Z;M0,245 Q150,235 300,250 Q450,265 600,248 Q750,235 900,255 Q1050,270 1200,250 L1200,280 L0,280 Z" dur="5s" repeatCount="indefinite"/>
+  </path>
+  <path d="M0,258 Q200,250 400,262 Q600,272 800,258 Q1000,248 1200,262 L1200,280 L0,280 Z" fill="#d8a547" opacity="0.15">
+    <animate attributeName="d" values="M0,258 Q200,250 400,262 Q600,272 800,258 Q1000,248 1200,262 L1200,280 L0,280 Z;M0,265 Q200,272 400,258 Q600,248 800,265 Q1000,275 1200,258 L1200,280 L0,280 Z;M0,258 Q200,250 400,262 Q600,272 800,258 Q1000,248 1200,262 L1200,280 L0,280 Z" dur="4s" repeatCount="indefinite"/>
+  </path>
+</svg>
